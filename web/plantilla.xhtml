@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <h:outputStylesheet name="./css/styles.css"/>
+        <title>eMatricula</title>
+    </h:head>
+
+    <h:body>
+        
+        <div id="top"> 
+            <ui:insert name="top"> 
+                <div id="firma"></div>
+            </ui:insert>
+        </div>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">
+                <h:form>
+                    <!-- -->
+                    <h:panelGrid columns="2" class="panel_central"> 
+                        <h:outputLabel value="Usuario:"/>
+                        <h:inputText value="#{usuario.usuario}"/>
+                        <h:outputLabel value="Clave:"/>
+                        <h:inputSecret value="#{usuario.clave}"/>
+                        <p:commandButton value="Ingresar" styleClass="ui-priority-primary"/>
+                        <p:commandButton value="Registrarse" styleClass="ui-priority-primary" action="registro"/>
+                    </h:panelGrid>
+                </h:form>
+            </ui:insert>
+        </div>
+
+        <div id="bottom">
+            <ui:insert name="bottom">Hecho por Kevin Bermudez <br/> Derechos reservados 2015 </ui:insert>
+        </div>
+
+    </h:body>
+
+</html>
